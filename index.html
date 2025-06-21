@@ -1,37 +1,127 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yoga Stundenplan</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Stundenplan</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Yoga Stundenplan</h1>
-  <div class="calendar">
-    <div class="cell header">Uhrzeit</div>
-    <div class="cell header">Montag</div>
-    <div class="cell header">Dienstag</div>
-    <div class="cell header">Mittwoch</div>
-    <div class="cell header">Donnerstag</div>
-    <div class="cell header">Freitag</div>
+    <h1>Yoga Stundenplan</h1>
+    <div class="timetable">
+        <!-- Montag -->
+        <div class="day-column"><h2>Montag</h2>
+            <div class="course" onclick="openPopup('montag1')">
+                <strong>Hatha Power Yoga</strong><br><small>19:00 - 20:10</small>
+            </div>
+            <div class="popup" id="montag1">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('montag1')">&times;</span>
+                    <h3>Hatha Power Yoga</h3>
+                    <p><strong>Uhrzeit:</strong> 19:00 - 20:10</p>
+                    <p><strong>Level:</strong> Level II Yoga</p>
+                    <p><strong>Ort:</strong> Haldenwang</p>
+                    <a href="https://daskraftzentrum.simplybook.it/v2/#book/service/149" target="_blank">Jetzt buchen</a>
+                </div>
+            </div>
+        </div>
 
-    <div class="cell time">17:00</div>
-    <div class="cell" onclick="openModal('https://daskraftzentrum.simplybook.it/v2/#book/service/149')">Vinyasa Flow</div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell" onclick="openModal('https://daskraftzentrum.simplybook.it/v2/#book/service/150')">Yin Yoga</div>
-    <div class="cell"></div>
-  </div>
+        <!-- Dienstag -->
+        <div class="day-column"><h2>Dienstag</h2>
+            <div class="course" onclick="openPopup('dienstag1')">
+                <strong>Vinyasa Yoga</strong><br><small>17:30 - 18:40</small>
+            </div>
+            <div class="popup" id="dienstag1">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('dienstag1')">&times;</span>
+                    <h3>Vinyasa Yoga</h3>
+                    <p><strong>Uhrzeit:</strong> 17:30 - 18:40</p>
+                    <p><strong>Level:</strong> Level II Yoga</p>
+                    <p><strong>Ort:</strong> Kempten</p>
+                    <a href="https://daskraftzentrum.simplybook.it/v2/#book/service/178" target="_blank">Jetzt buchen</a>
+                </div>
+            </div>
 
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <iframe id="modal-frame" src=""></iframe>
+            <div class="course" onclick="openPopup('dienstag2')">
+                <strong>Yin Yoga</strong><br><small>19:00 - 20:10</small>
+            </div>
+            <div class="popup" id="dienstag2">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('dienstag2')">&times;</span>
+                    <h3>Yin Yoga</h3>
+                    <p><strong>Uhrzeit:</strong> 19:00 - 20:10</p>
+                    <p><strong>Level:</strong> Level I Yoga</p>
+                    <p><strong>Ort:</strong> Kempten</p>
+                    <a href="https://daskraftzentrum.simplybook.it/v2/#book/service/179" target="_blank">Jetzt buchen</a>
+                </div>
+            </div>
+
+            <div class="course" onclick="openPopup('dienstag3')">
+                <strong>Hatha basic Yoga</strong><br><small>19:00 - 20:10</small>
+            </div>
+            <div class="popup" id="dienstag3">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('dienstag3')">&times;</span>
+                    <h3>Hatha basic Yoga</h3>
+                    <p><strong>Uhrzeit:</strong> 19:00 - 20:10</p>
+                    <p><strong>Level:</strong> Level I Yoga</p>
+                    <p><strong>Ort:</strong> Haldenwang</p>
+                    <a href="https://daskraftzentrum.simplybook.it/v2/#book/service/153" target="_blank">Jetzt buchen</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Donnerstag -->
+        <div class="day-column"><h2>Donnerstag</h2>
+            <div class="course" onclick="openPopup('donnerstag1')">
+                <strong>Yoga für den Rücken</strong><br><small>17:30 - 18:40</small>
+            </div>
+            <div class="popup" id="donnerstag1">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('donnerstag1')">&times;</span>
+                    <h3>Yoga für den Rücken</h3>
+                    <p><strong>Uhrzeit:</strong> 17:30 - 18:40</p>
+                    <p><strong>Level:</strong> Level I Yoga</p>
+                    <p><strong>Ort:</strong> Haldenwang</p>
+                    <a href="https://daskraftzentrum.simplybook.it/v2/#book/service/151" target="_blank">Jetzt buchen</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Freitag -->
+        <div class="day-column"><h2>Freitag</h2>
+            <div class="course" onclick="openPopup('freitag1')">
+                <strong>Friday flow</strong><br><small>18:30 - 19:40</small>
+            </div>
+            <div class="popup" id="freitag1">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('freitag1')">&times;</span>
+                    <h3>Friday flow</h3>
+                    <p><strong>Uhrzeit:</strong> 18:30 - 19:40</p>
+                    <p><strong>Level:</strong> Level I-II Yoga</p>
+                    <p><strong>Ort:</strong> Kempten</p>
+                    <a href="https://daskraftzentrum.simplybook.it/v2/#book/service/218" target="_blank">Jetzt buchen</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Samstag -->
+        <div class="day-column"><h2>Samstag</h2>
+            <div class="course" onclick="openPopup('samstag1')">
+                <strong>Yin Yoga</strong><br><small>17:00 - 18:10</small>
+            </div>
+            <div class="popup" id="samstag1">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('samstag1')">&times;</span>
+                    <h3>Yin Yoga</h3>
+                    <p><strong>Uhrzeit:</strong> 17:00 - 18:10</p>
+                    <p><strong>Level:</strong> Level I Yoga</p>
+                    <p><strong>Ort:</strong> Haldenwang</p>
+                    <a href="https://daskraftzentrum.simplybook.it/v2/#book/service/232" target="_blank">Jetzt buchen</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
