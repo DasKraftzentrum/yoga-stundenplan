@@ -1,15 +1,16 @@
-function openPopup(id) {
-    document.getElementById(id).style.display = "block";
+.timetable {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
 }
 
-function closePopup(id) {
-    document.getElementById(id).style.display = "none";
+.day-column {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 180px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
 }
-
-window.onclick = function(event) {
-    document.querySelectorAll('.popup').forEach(popup => {
-        if (event.target === popup) {
-            popup.style.display = "none";
-        }
-    });
-};
